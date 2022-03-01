@@ -48,7 +48,7 @@ module.exports = async (config, manifest, purgeDeleted) => {
     } else {  
       var newkvm = {
         'name': kvmName,
-        'encrypted': encrypted,
+        'encrypted': true,
         'entry': Object.keys(kvm).map(key => ({ 'name': key, 'value': getValue(kvm[key]) }))
       }
     }
